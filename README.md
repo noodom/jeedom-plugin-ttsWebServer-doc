@@ -11,3 +11,9 @@ Description :
 Pour ouvrir un cas de dysfonctionnement, reportez-vous au bouton "Issues" (https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/issues)
 
 > Lire en priorité, le texte : https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/issues/1
+
+# Change Log : 
+https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/Change-Log
+
+# Forum de discussion (Jeedom) : 
+https://www.jeedom.com/forum/viewtopic.php?f=28&t=26184
