@@ -2,26 +2,26 @@
 = image:../images/ttsWebServer_icon.png[ttsWebServer, 70, 70] TTS Web Server 
 
 == Description
-Ce plugin vous permet de générer des messages TTS via un Web Service dédié hébergé sur Androdi (soit hors solution cloud). + 
+Ce plugin vous permet de générer des messages TTS via un Web Service dédié hébergé sur Android (donc aucune utilisation du cloud). + 
 Pour permettre cette fonction, ce plugin nécessite obligatoire l'installation de l'application Android du même nom (TTS Web Server). +
  + 
 Le plugin dispose des fonctionnalités suivantes : 
 
-	* de diffuser sur différent player `(*1)`:
+	* de diffuser sur différents players `(*1)`:
 	** local sur l'équipement Android (téléphone, tablette,...) ;
 	** Sonos ;
 	** Squeezebox ; 
 	** Syno Audio ; +
 
 	* de sauvegarder les messages générés sur : 
-	** un espace de partage distant (ex: Synology) ; 
+	** un espace de partage distant (ex: NAS Synology) ; 
 	** localement sur la box Jeedom ; 
 	
 	* d'une bibliothèque des messages complètement administrable, ainsi que la possibilité d'utiliser tous les moteurs `(*2)` installés sur votre équipement Android. +
 	
-TIP: `(*1)`: **les plugins associés doivent obligatoirement être installés** pour que la diffusion sur ces players fonctionnent correctement (pour certain, les commandes "dire" des plugin initiaux réutilisés). +
-Remarque: si le plugin n'est pas installé, la diffusion de la synthèse par celui ne sera pas proposé au niveau du TTS Web Server. +
-`(*2)`: par défaut, le moteur Google, mais aussi si vous achetez des voix supplémentaires Voxygene par exemple. +
+TIP: `(*1)`: **les plugins associés doivent obligatoirement être installés** pour que la diffusion sur ces players fonctionnent correctement (pour certain, les commandes "dire" des plugin initiaux sont réutilisés). +
+Remarque: si le plugin n'est pas installé, la diffusion de la synthèse par celui-ci ne sera pas proposé au niveau du TTS Web Server. +
+`(*2)`: par défaut, le moteur Google, mais aussi si vous achetez des voix supplémentaires Voxygen par exemple. +
 
 Les commandes du Serveur TTS peuvent être utilisées via le Widget (standard jeedom) sur les dashbord/design, mais également au niveau des scénarios. +
 
@@ -38,12 +38,12 @@ Ces "pré-requis" peuvent constituer une description pas à pas des tâches à s
 
 * Sur la page configuration : 
 ** Vérifier que les dépenses sont bonnes ; 
-** Ne cocher la case "bouton "Ajouter"" que si la dépense "ARP-SCAN" ne peut pas s'installer ; 
+** Ne cocher la case "bouton "Ajouter"" que si la dépendance "ARP-SCAN" ne peut pas s'installer ; 
 ** Cocher l'option "Afficher le panel mobile" ; 
 * Sur votre terminal Android : 
-** Activer le paramètre "source inconnue" ; 
+** Activer le paramètre "source inconnue" (généralement accessible dans les paramètres de sécurité) ; 
 ** Autoriser le stockage de fichier pour l'application TWS (action à faire, une fois l'installation terminée, étape ci-dessous) ; 
-* Depuis l'interface mobile, se rendre sur la menu plugin ; 
+* Depuis l'interface mobile de Jeedom, se rendre sur le menu plugin ; 
 ** cliquer sur l'icone TWS et installer l'application ; 
 ** lancer l'application ; 
 * Sur la page des équipements :
@@ -52,7 +52,7 @@ Ces "pré-requis" peuvent constituer une description pas à pas des tâches à s
 
 === -- Installation et configuration du plugin
 
-Après téléchargement du plugin, vous devez l'activer pour profiter de ces fonctionnalité. +
+Après téléchargement du plugin, vous devez l'activer pour profiter de ces fonctionnalités. +
 
 Une mise à niveau / installation des "Dépendances" est fortement recommandée pour disposer de toutes les fonctionnalités du plugin. 
 _(plus d'informations sur https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Service-Plugin-:-liste-des-d%C3%A9pendances[les dépendances])_ +
@@ -204,8 +204,8 @@ image:../images/ttsWebServer_screenshot4.jpg[]
 La définition de chaque champ de cette page est décrite directement sur la page, via l'icone "?" à coté du titre. +
 
 
-NOTE: `(*1)`: le changement de voix entre moteur "Voxygène" est assez rapide. Toutefois le retour sur le moteur "Google" peut générer un temps de latence assez important. +
-Il est donc déconseillez de faire "yoyo" entre les voix (du moins avec la voix Google), même pour tester !
+NOTE: `(*1)`: le changement de voix entre moteur "Voxygen" est assez rapide. Toutefois le retour sur le moteur "Google" peut générer un temps de latence assez important. +
+Il est donc déconseillé de faire "yoyo" entre les voix (du moins avec la voix Google), même pour tester !
 
 === -- Assistance pour l'installation de l'application Android (APK)
 
@@ -220,7 +220,7 @@ Après avoir respecté ces pré-requis, cliquez sur l'icone TWS et l'apk est té
 |=======================
 | image:../images/ttsWebServer_install_apk.jpg[] | *[red]#REMARQUE:#* +
 L'application n'étant pas connue du playStore, vous devez autoriser les "sources inconnues" le temps de l'installation. + 
-[red]#Une fois l'installation terminée, je remmande vivement de revenir à l'état initial en désactivant à nouveau les "sources inconnues", afin d'éviter tout risque à votre équipement Android.#
+[red]#Une fois l'installation terminée, je recommande vivement de revenir à l'état initial en désactivant à nouveau les "sources inconnues", afin d'éviter tout risque à votre équipement Android.#
 |=======================
 
 == La bibliothèque des messages
@@ -242,7 +242,7 @@ Des icones peuvent apparaitre, permettant d'identifier des points d'attention vi
 
 == Fonctionnalités complémentaires disponibles
 
-=== -- Lecture spécifique des unités
+=== -- Lecture spécifique des unités (scénarios)
 
 Généralement, la diffusion de la température se fait de la manière suivante : "12,5 degrés". +
 Si vous rentrez ces informations dans un format spécifique dans votre champs de saisie, vous pourrez obtenir une diffusion au format "12 degrés 5". +
