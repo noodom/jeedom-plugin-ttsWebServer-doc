@@ -29,7 +29,6 @@ NOTE: * _dans la suite du document, "TTS Web Server" est abrégé en "TWS"._ +
 * _sur les différentes interfaces (configuration, équipement, ...) pour chaque paramètre, une icone avec un "?" permet d'obtenir des informations sur le paramètre et permet déjà d'apporter un niveau de compréhension._
 
 
-
 == Configuration
 
 === -- PRE-REQUIS avant toute utilisation 
@@ -43,11 +42,19 @@ Ces "pré-requis" peuvent constituer une description pas à pas des tâches à s
 * Sur votre terminal Android : 
 ** Activer le paramètre "source inconnue" (généralement accessible dans les paramètres de sécurité) ; 
 ** Autoriser le stockage de fichier pour l'application TWS (action à faire, une fois l'installation terminée, étape ci-dessous) ; 
-* Depuis l'interface mobile de Jeedom, se rendre sur le menu plugin ; 
+* Depuis l'interface mobile de Jeedom `(*1)`, se rendre sur le menu plugin ; 
 ** cliquer sur l'icone TWS et installer l'application ; 
 ** lancer l'application ; 
 * Sur la page des équipements :
 ** lancer une découverte > les équipements (application distante TWS) apparaitront !
+
+TIP: `(*1)` l'interface mobile est accessible via un navigateur Web, il n'est pas question ici de l'application mobile de Jeedom.
+
+
+=== -- Version Android
+
+Pour l'installation de l'APK, le build minimum d'Android autorisé est le "19", correspondant à la version 4.4 (kitkat).
+Pour plus d'information se référer à la https://source.android.com/source/build-numbers[liste des versions].
 
 
 === -- Installation et configuration du plugin
