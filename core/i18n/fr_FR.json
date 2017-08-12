@@ -27,7 +27,9 @@
         "Vous n'avez aucune application \"TTS Web Server\" configurée. Configurez ou activez en au moins une.": "Vous n'avez aucune application \"TTS Web Server\" configurée. Configurez ou activez en au moins une.",
         "Equipement \"local\" (téléphone, tablette, ...)": "Equipement \"local\" (téléphone, tablette, ...)",
         "Enceinte Sonos": "Enceinte Sonos",
-        "Synoaudio (Audio Station)": "Synoaudio (Audio Station)"
+        "Synoaudio (Audio Station)": "Synoaudio (Audio Station)",
+        "le fichier temporaire n'a pas été trouvé.": "le fichier temporaire n'a pas été trouvé.",
+        "le fichier temporaire cible n'a pas été généré; le format du fichier initial est retourné.": "le fichier temporaire cible n'a pas été généré; le format du fichier initial est retourné."
     },
     "plugins\/ttsWebServer\/3rdparty\/olindote_abarrau\/Tools\/olindoteTools.php": {
         "Version du plugin": "Version du plugin",
@@ -36,7 +38,13 @@
         "Remontée de dysfonctionnement": "Remontée de dysfonctionnement",
         "Toutes remontés de cas de dysfonctionnement, clairement identifié (description claire et log à l'appui) peut être faite sur le site dédié au plugin": "Toutes remontés de cas de dysfonctionnement, clairement identifié (description claire et log à l'appui) peut être faite sur le site dédié au plugin",
         "Cliquez sur l'icone \"Envoyer un rapport de bug\" (à coté de l'heure).": "Cliquez sur l'icone \"Envoyer un rapport de bug\" (à coté de l'heure).",
-        "Cliquez sur l'icone \"Envoyer un rapport de bug\" (à coté de l'heure), à partir de la page du plugin.": "Cliquez sur l'icone \"Envoyer un rapport de bug\" (à coté de l'heure), à partir de la page du plugin."
+        "Cliquez sur l'icone \"Envoyer un rapport de bug\" (à coté de l'heure), à partir de la page du plugin.": "Cliquez sur l'icone \"Envoyer un rapport de bug\" (à coté de l'heure), à partir de la page du plugin.",
+        "Zip": "Zip",
+        "Précédente": "Précédente",
+        "Archive": "Archive",
+        "(Admin) Répertoire d'archivage du plugin": "(Admin) Répertoire d'archivage du plugin",
+        "Définir le répertoire d'installation du plugin. ATTENTION en modifiant ce chemin.": "Définir le répertoire d'installation du plugin. ATTENTION en modifiant ce chemin.",
+        "Toute remonté de cas de dysfonctionnement, clairement identifié (description claire et log à l'appui) peut être réalisée sur le site dédié au plugin": "Toute remonté de cas de dysfonctionnement, clairement identifié (description claire et log à l'appui) peut être réalisée sur le site dédié au plugin"
     },
     "plugins\/ttsWebServer\/plugin_info\/configuration.php": {
         "Autoriser la diffusion sur": "Autoriser la diffusion sur",
@@ -100,7 +108,27 @@
         "Arrêter de vérifier la version de l'APK": "Arrêter de vérifier la version de l'APK",
         "Traitement en cours...": "Traitement en cours...",
         "Vous ne pouvez relancer une purge, maintenant. Recharger la page.": "Vous ne pouvez relancer une purge, maintenant. Recharger la page.",
-        "Vous ne pouvez relancer une vérification des données, maintenant. Recharger la page.": "Vous ne pouvez relancer une vérification des données, maintenant. Recharger la page."
+        "Vous ne pouvez relancer une vérification des données, maintenant. Recharger la page.": "Vous ne pouvez relancer une vérification des données, maintenant. Recharger la page.",
+        "En cochant, vous autorisez une maintenance toutes les nuits pour vérifier si les fichiers listés dans la bibliothèques sont bien existants.": "En cochant, vous autorisez une maintenance toutes les nuits pour vérifier si les fichiers listés dans la bibliothèques sont bien existants.",
+        "En cochant, vous autorisez une maintenance toutes nuits pour vérifier si des fichiers présents dans le répertoire d'archivage sont absents de la bibliothèque.": "En cochant, vous autorisez une maintenance toutes nuits pour vérifier si des fichiers présents dans le répertoire d'archivage sont absents de la bibliothèque.",
+        "2 options vous sont proposées:": "2 options vous sont proposées:",
+        "- \"création en bibliothèque\": le fichier est recréé dans la bibliothèque, mais sans phrase associée;": "- \"création en bibliothèque\": le fichier est recréé dans la bibliothèque, mais sans phrase associée;",
+        "- \"suppression\": le fichier est directement supprimé.": "- \"suppression\": le fichier est directement supprimé.",
+        "Permet de supprimer des fichiers générés et plus utilisés depuis plus de X jours.": "Permet de supprimer des fichiers générés et plus utilisés depuis plus de X jours.",
+        "(Remarque: traitement de nuit.)": "(Remarque: traitement de nuit.)",
+        "Remarque: si la tablette est en veille, le temps de réponse peut être plus long (à prendre en compte lors de votre choix).": "Remarque: si la tablette est en veille, le temps de réponse peut être plus long (à prendre en compte lors de votre choix).",
+        "Permet d'ajouter\/supprimer des choix à la liste de choix de l'option \"Suppression fichier plus ancien\".": "Permet d'ajouter\/supprimer des choix à la liste de choix de l'option \"Suppression fichier plus ancien\".",
+        "(Maintenance) Rechercher les fichiers \"orphelins\"": "(Maintenance) Rechercher les fichiers \"orphelins\"",
+        "Désactivé": "Désactivé",
+        "création en bibliothèque": "création en bibliothèque",
+        "suppression": "suppression",
+        "(Maintenance) Suppression fichiers anciens": "(Maintenance) Suppression fichiers anciens",
+        "Supprimer maintenant": "Supprimer maintenant",
+        "Liste des choix pour l'option \"Suppression fichier plus ancien\"": "Liste des choix pour l'option \"Suppression fichier plus ancien\"",
+        "Préciser une valeur d\\'activation pour la vérification des fichiers orphelins.": "Préciser une valeur d\\'activation pour la vérification des fichiers orphelins.",
+        "Vous ne pouvez relancer une recherche des fichiers orphelins, maintenant. Recharger la page.": "Vous ne pouvez relancer une recherche des fichiers orphelins, maintenant. Recharger la page.",
+        "Préciser une valeur d\\'activation pour la suppression des fichiers plus ancien.": "Préciser une valeur d\\'activation pour la suppression des fichiers plus ancien.",
+        "Vous ne pouvez relancer une suppression des fichiers plus ancien, maintenant. Recharger la page.": "Vous ne pouvez relancer une suppression des fichiers plus ancien, maintenant. Recharger la page."
     },
     "plugins\/ttsWebServer\/desktop\/php\/ttsWebServer.php": {
         "Réglages TTS": "Réglages TTS",
@@ -223,7 +251,12 @@
         "defaut": "defaut",
         "depuis": "depuis",
         "(Android) Sources inconnues": "(Android) Sources inconnues",
-        "(Android) Marque et référence du produit": "(Android) Marque et référence du produit"
+        "(Android) Marque et référence du produit": "(Android) Marque et référence du produit",
+        "Le fichier audio ne sera pas renvoyé au plugin, lors d'une \"lecture locale\" du fichier sur l'équipement distant.": "Le fichier audio ne sera pas renvoyé au plugin, lors d'une \"lecture locale\" du fichier sur l'équipement distant.",
+        "Information sur le niveau de batterie (en %).": "Information sur le niveau de batterie (en %).",
+        "Commandes": "Commandes",
+        "Commandes sur les équipements hébergeant les applications distantes \"TTS Web Server\"": "Commandes sur les équipements hébergeant les applications distantes \"TTS Web Server\"",
+        "(Android) Batterie": "(Android) Batterie"
     },
     "plugins\/ttsWebServer\/desktop\/modal\/PlayerTTSSynchronize.php": {
         "Cette synchronisation vous permet de recréer toutes les commandes \"Player TTS\" autorisées pour la diffusion.": "Cette synchronisation vous permet de recréer toutes les commandes \"Player TTS\" autorisées pour la diffusion.",
@@ -246,7 +279,10 @@
         "La taille du fichier est trop petite": "La taille du fichier est trop petite",
         "Risque que la diffusion sur squeezebox, synoAudio ou depuis un archivage \"local\", ne puisse être réalisé (diffusion de blanc).": "Risque que la diffusion sur squeezebox, synoAudio ou depuis un archivage \"local\", ne puisse être réalisé (diffusion de blanc).",
         "L'emplacement du fichier ne correspond pas à pas la configuration de partage actuellement active": "L'emplacement du fichier ne correspond pas à pas la configuration de partage actuellement active",
-        "Fichier non trouvé sur l'espace de partage.": "Fichier non trouvé sur l'espace de partage."
+        "Fichier non trouvé sur l'espace de partage.": "Fichier non trouvé sur l'espace de partage.",
+        "Nombre de fichier (bdd)": "Nombre de fichier (bdd)",
+        "Nombre de fichier sur le disque": "Nombre de fichier sur le disque",
+        "Tout supprimer": "Tout supprimer"
     },
     "plugins\/ttsWebServer\/mobile\/html\/panel.html": {
         "Téléchargement et installation de l'application distante (APK):": "Téléchargement et installation de l'application distante (APK):",
@@ -283,7 +319,14 @@
         "La liste retournée est vide.": "La liste retournée est vide.",
         "L\\'adresse Mac doit être renseignée pour pouvoir mettre à jour ces informations.": "L\\'adresse Mac doit être renseignée pour pouvoir mettre à jour ces informations.",
         "Recherche des données en cours ...": "Recherche des données en cours ...",
-        "Les données retournées sont vides.": "Les données retournées sont vides."
+        "Les données retournées sont vides.": "Les données retournées sont vides.",
+        "Afficher": "Afficher",
+        "Historiser": "Historiser",
+        "Tester": "Tester",
+        "Sortie audio de la box": "Sortie audio de la box",
+        "Recharger la page": "Recharger la page",
+        "Démarré": "Démarré",
+        "Arrêté": "Arrêté"
     },
     "plugins\/ttsWebServer\/desktop\/js\/panel.js": {
         "Nb caractères": "Nb caractères",
@@ -296,6 +339,8 @@
         "Date de création": "Date de création",
         "Equipement synthétiseur": "Equipement synthétiseur",
         "Souhaitez vous réellement supprimer le fichier son associé à cette phrase ?": "Souhaitez vous réellement supprimer le fichier son associé à cette phrase ?",
-        "Donnée supprimée": "Donnée supprimée"
+        "Donnée supprimée": "Donnée supprimée",
+        "Souhaitez vous réellement supprimer TOUS les fichiers audio de l\\'espace d\\'archivage (dont les orphelins) ?": "Souhaitez vous réellement supprimer TOUS les fichiers audio de l\\'espace d\\'archivage (dont les orphelins) ?",
+        "Attention: Le temps de traitement peut être assez long, en fonction du nombre de fichier !": "Attention: Le temps de traitement peut être assez long, en fonction du nombre de fichier !"
     }
 }

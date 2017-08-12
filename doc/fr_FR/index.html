@@ -370,7 +370,7 @@ span.icon > [class^="icon-"], span.icon > [class*=" icon-"] { cursor: default; }
 <h2 id="_description">Description</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Ce plugin vous permet de générer des messages TTS via un Web Service dédié hébergé sur Androdi (soit hors solution cloud).<br>
+<p>Ce plugin vous permet de générer des messages TTS via un Web Service dédié hébergé sur Android (donc aucune utilisation du cloud).<br>
 Pour permettre cette fonction, ce plugin nécessite obligatoire l&#8217;installation de l&#8217;application Android du même nom (TTS Web Server).<br>
 <br>
 Le plugin dispose des fonctionnalités suivantes :</p>
@@ -378,7 +378,7 @@ Le plugin dispose des fonctionnalités suivantes :</p>
 <div class="ulist">
 <ul>
 <li>
-<p>de diffuser sur différent player <code>(*1)</code>:</p>
+<p>de diffuser sur différents players <code>(*1)</code>:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -401,7 +401,7 @@ Le plugin dispose des fonctionnalités suivantes :</p>
 <div class="ulist">
 <ul>
 <li>
-<p>un espace de partage distant (ex: Synology) ;</p>
+<p>un espace de partage distant (ex: NAS Synology) ;</p>
 </li>
 <li>
 <p>localement sur la box Jeedom ;</p>
@@ -421,9 +421,9 @@ Le plugin dispose des fonctionnalités suivantes :</p>
 <i class="icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-<code>(*1)</code>: <strong>les plugins associés doivent obligatoirement être installés</strong> pour que la diffusion sur ces players fonctionnent correctement (pour certain, les commandes "dire" des plugin initiaux réutilisés).<br>
-Remarque: si le plugin n&#8217;est pas installé, la diffusion de la synthèse par celui ne sera pas proposé au niveau du TTS Web Server.<br>
-<code>(*2)</code>: par défaut, le moteur Google, mais aussi si vous achetez des voix supplémentaires Voxygene par exemple.<br>
+<code>(*1)</code>: <strong>les plugins associés doivent obligatoirement être installés</strong> pour que la diffusion sur ces players fonctionnent correctement (pour certain, les commandes "dire" des plugin initiaux sont réutilisés).<br>
+Remarque: si le plugin n&#8217;est pas installé, la diffusion de la synthèse par celui-ci ne sera pas proposé au niveau du TTS Web Server.<br>
+<code>(*2)</code>: par défaut, le moteur Google, mais aussi si vous achetez des voix supplémentaires (Voxygen par exemple).<br>
 </td>
 </tr>
 </table>
@@ -443,6 +443,13 @@ Remarque: si le plugin n&#8217;est pas installé, la diffusion de la synthèse p
 </td>
 </tr>
 </table>
+</div>
+<div class="sect2">
+<h3 id="__repr_sentation_des_2_widgets_possibles">&#8201;&#8212;&#8201;Représentation des 2 widgets possibles</h3>
+<div class="paragraph">
+<p><span class="image"><img src="../images/ttsWebServer_screenshot7.jpg" alt="ttsWebServer_screenshot7"></span>
+<br></p>
+</div>
 </div>
 </div>
 </div>
@@ -464,7 +471,7 @@ Remarque: si le plugin n&#8217;est pas installé, la diffusion de la synthèse p
 <p>Vérifier que les dépenses sont bonnes ;</p>
 </li>
 <li>
-<p>Ne cocher la case "bouton "Ajouter"" que si la dépense "ARP-SCAN" ne peut pas s&#8217;installer ;</p>
+<p>Ne cocher la case "bouton "Ajouter"" que si la dépendance "ARP-SCAN" ne peut pas s&#8217;installer ;</p>
 </li>
 <li>
 <p>Cocher l&#8217;option "Afficher le panel mobile" ;</p>
@@ -477,7 +484,7 @@ Remarque: si le plugin n&#8217;est pas installé, la diffusion de la synthèse p
 <div class="ulist">
 <ul>
 <li>
-<p>Activer le paramètre "source inconnue" ;</p>
+<p>Activer le paramètre "source inconnue" (généralement accessible dans les paramètres de sécurité) ;</p>
 </li>
 <li>
 <p>Autoriser le stockage de fichier pour l&#8217;application TWS (action à faire, une fois l&#8217;installation terminée, étape ci-dessous) ;</p>
@@ -486,7 +493,7 @@ Remarque: si le plugin n&#8217;est pas installé, la diffusion de la synthèse p
 </div>
 </li>
 <li>
-<p>Depuis l&#8217;interface mobile, se rendre sur la menu plugin ;</p>
+<p>Depuis l&#8217;interface mobile de Jeedom <code>(*1)</code>, se rendre sur le menu plugin ;</p>
 <div class="ulist">
 <ul>
 <li>
@@ -510,15 +517,34 @@ Remarque: si le plugin n&#8217;est pas installé, la diffusion de la synthèse p
 </li>
 </ul>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<code>(*1)</code> l&#8217;interface mobile est accessible via un navigateur Web, il n&#8217;est pas question ici de l&#8217;application mobile de Jeedom.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__version_android">&#8201;&#8212;&#8201;Version Android</h3>
+<div class="paragraph">
+<p>Pour l&#8217;installation de l&#8217;APK, le build minimum d&#8217;Android autorisé est le "19", correspondant à la version 4.4 (kitkat).
+Pour plus d&#8217;information se référer à la <a href="https://source.android.com/source/build-numbers">liste des versions</a>.</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="__installation_et_configuration_du_plugin">&#8201;&#8212;&#8201;Installation et configuration du plugin</h3>
 <div class="paragraph">
-<p>Après téléchargement du plugin, vous devez l&#8217;activer pour profiter de ces fonctionnalité.<br></p>
+<p>Après téléchargement du plugin, vous devez l&#8217;activer pour profiter de ces fonctionnalités.<br></p>
 </div>
 <div class="paragraph">
 <p>Une mise à niveau / installation des "Dépendances" est fortement recommandée pour disposer de toutes les fonctionnalités du plugin.
-<em>(plus d&#8217;informations sur <a href="https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Service-Plugin-:-liste-des-d%C3%A9pendances">les dépendances</a>)</em><br></p>
+<em>(plus d&#8217;informations sur <a href="https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Plugin-:-liste-des-d%C3%A9pendances">les dépendances</a>)</em><br></p>
 </div>
 <div class="paragraph">
 <p>Des paramètres de configuration vous sont proposés, mais les valeurs par défaut peuvent être conservées.<br></p>
@@ -555,6 +581,17 @@ Un bouton vous permet de réaliser l&#8217;opération manuellement.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Si l&#8217;option est activée, une maintenant quotidienne (à 0h), est réalisée pour vérifier si les fichiers listés dans la bibliothèque sont bien présents, en fonction du "lieu" de sauvegarde définie.<br>
 En cas d&#8217;erreur, une icone s&#8217;affiche dans la colonne "emplacement" sur la bibliothèque.<br>
 Un bouton vous permet de réaliser l&#8217;opération manuellement.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Maintenance) Rechercher les fichiers "orphelins"</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Permet de recherche les fichiers orphelins (présent sur l&#8217;espace de stockage, mais absent de la bibliothèque). 2 valeurs possibles:<br>
+- "création en bibliothèque": le fichier est recréé dans la bibliothèque, mais sans phrase associée; cela vous permet d&#8217;avoir une vision de ce que vous avez dans le répertoire de stockage et les supprimers au besoin.<br>
+- "suppression": le fichier est directement supprimé.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Maintenance) Suppression fichiers anciens</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Permet de supprimer les fichiers dont la date d&#8217;utilisation est plus anciennes que la durée sélectionnées.<br>
+Valeurs possibles: Désactivé, 15j, 30j, 90j, 180j.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">(Distant) TimeOut des requêtes</p></td>
@@ -764,8 +801,9 @@ Pour définir l&#8217;ordre, sélectionnez l&#8217;icone "double flêche" et dé
 <p><span class="image"><img src="../images/ttsWebServer_TWS3.jpg" alt="ttsWebServer_TWS3"></span></p>
 </div>
 <div class="paragraph">
-<p>Depuis cette page, vous pouvez renommer le nom des commandes qui ont été détectée comme des players potentiels pour la diffusion de TTS.<br>
-Ce nom apparait au niveau du widget (bouton de validation d&#8217;envoi du texte à synthétiser).<br></p>
+<p>Depuis cette page, vous pouvez renommer le nom des commandes qui ont été détectées comme des players potentiels pour la diffusion de TTS.<br>
+Ce nom apparait au niveau du widget (bouton de validation d&#8217;envoi du texte à synthétiser) sur le widget de l'équipement "Serveur".<br>
+Vous pouvez également paramétrer son affichage ou non (si la case est décoché, la commande ne sera pas affichée sur l'équipement "Serveur").</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -774,8 +812,7 @@ Ce nom apparait au niveau du widget (bouton de validation d&#8217;envoi du texte
 <i class="icon-note" title="Note"></i>
 </td>
 <td class="content">
-L&#8217;enregistrement de ce nouveau nom doit obligatoirement être enregistré par le bouton "enregistré" au niveau de chaque ligne (colonne "Action").<br>
-Remarque: il est également recommandé d&#8217;enregistrer au niveau de l'équipement également (pour permettre un raffrachissement des widgets).
+L&#8217;enregistrement de ce nouveau nom (ou changement de paramètres) doit obligatoirement être enregistré par le bouton "enregistré" au niveau de chaque ligne (colonne "Action").<br>
 </td>
 </tr>
 </table>
@@ -841,6 +878,53 @@ La liste "application" n&#8217;est pas encore utilisée, elle est là à titre d
 </table>
 
 <div class="paragraph">
+<p><strong><span class="lime underline">L&#8217;onglet "Commandes"</span></strong> présente les commandes disponilbes au niveau de l'équipement local hébergent l&#8217;application TWS :</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../images/ttsWebServer_TWS5.jpg" alt="ttsWebServer_TWS5"></span></p>
+</div>
+<div class="paragraph">
+<p>Ces commandes sont créées à la création de l'équipement. Vous ne pouvez ni en ajouter, ni en supprimer (elles seront créées lors d&#8217;un enregistrement).<br>
+Vous pouvez : modifier le nom, paramétrer si vous les afficher ou non et si vous souhaitez historiser les données ou non.</p>
+</div>
+<table class="tableblock frame-topbot grid-all" style="width:100%; ">
+<colgroup>
+<col style="width:25%;">
+<col style="width:75%;"> 
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Paramètre</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Statut WS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remonte l'état du service de l&#8217;application TWS distante.<br>
+Remarque: cette information est mise à jour à chaque requête vers l&#8217;application.<br>
+Cas à prendre en compte: dans le cas d&#8217;un timeout de la requête TTS, l'état passera à "0".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Batterie</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remonte le niveau de batterie de l'équipement distant où est hébergé l&#8217;application TWS (en %).<br>
+Remarque: le niveau de batterie reste à la dernière valeur connue lorsque l&#8217;application distante TWS n&#8217;est pas joignable.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dire</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cette commande permet d&#8217;envoyer une demande de diffusion TTS sur l'équipement distant.
+(La même commande se retrouve aussi sur l'équipement "Serveur" pour l'équipement distant en question.)<br>
+Remarque: dans ce cas, la fonction "cluster" ne s&#8217;applique pas.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relancer Service</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cette commande permet de relancer le Service sur l&#8217;application TWS distante.<br>
+<em>(Attention: cette action NE DEMARRE PAS l&#8217;application, elle relance uniquement le service d'écoute.)</em></p></td>
+</tr>
+</tbody>
+</table>
+
+<div class="paragraph">
 <p><strong><span class="lime underline">L&#8217;onglet "Etats / Infos"</span></strong> présente de remonter des informations liée à l&#8217;application TWS :</p>
 </div>
 <div class="paragraph">
@@ -856,8 +940,8 @@ La liste "application" n&#8217;est pas encore utilisée, elle est là à titre d
 <i class="icon-note" title="Note"></i>
 </td>
 <td class="content">
-<code>(*1)</code>: le changement de voix entre moteur "Voxygène" est assez rapide. Toutefois le retour sur le moteur "Google" peut générer un temps de latence assez important.<br>
-Il est donc déconseillez de faire "yoyo" entre les voix (du moins avec la voix Google), même pour tester !
+<code>(*1)</code>: le changement de voix entre moteur "Voxygen" est assez rapide. Toutefois le retour sur le moteur "Google" peut générer un temps de latence assez important.<br>
+Il est donc déconseillé de faire "yoyo" entre les voix (du moins avec la voix Google), même pour tester !
 </td>
 </tr>
 </table>
@@ -884,7 +968,7 @@ Après avoir respecté ces pré-requis, cliquez sur l&#8217;icone TWS et l&#8217
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="image"><img src="../images/ttsWebServer_install_apk.jpg" alt="ttsWebServer_install_apk"></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong><span class="red">REMARQUE:</span></strong><br>
 L&#8217;application n'étant pas connue du playStore, vous devez autoriser les "sources inconnues" le temps de l&#8217;installation.<br>
-<span class="red">Une fois l&#8217;installation terminée, je remmande vivement de revenir à l'état initial en désactivant à nouveau les "sources inconnues", afin d'éviter tout risque à votre équipement Android.</span></p></td>
+<span class="red">Une fois l&#8217;installation terminée, je recommande vivement de revenir à l'état initial en désactivant à nouveau les "sources inconnues", afin d'éviter tout risque à votre équipement Android.</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -922,13 +1006,16 @@ L&#8217;utilisateur peut également filtrer les valeurs recherchées.<br></p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Le bouton "Tout Supprimer" permet de supprimer toutes les données présentes dans la bibliothèque, ainsi que les fichiers orphelins détectés sur l&#8217;espace de stockage en cours de configuration.<br></p>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_fonctionnalit_s_compl_mentaires_disponibles">Fonctionnalités complémentaires disponibles</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="__lecture_sp_cifique_des_unit_s">&#8201;&#8212;&#8201;Lecture spécifique des unités</h3>
+<h3 id="__lecture_sp_cifique_des_unit_s_sc_narios">&#8201;&#8212;&#8201;Lecture spécifique des unités (scénarios)</h3>
 <div class="paragraph">
 <p>Généralement, la diffusion de la température se fait de la manière suivante : "12,5 degrés".<br>
 Si vous rentrez ces informations dans un format spécifique dans votre champs de saisie, vous pourrez obtenir une diffusion au format "12 degrés 5".<br></p>
@@ -945,13 +1032,30 @@ Si vous rentrez ces informations dans un format spécifique dans votre champs de
 </div>
 </div>
 <div class="sect1">
-<h2 id="_l_application_android">L&#8217;application Android</h2>
+<h2 id="_les_d_pendances">Les Dépendances</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Les dépenses du plugin sont listées à l&#8217;adresse suivante :<br>
+<a href="https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Plugin-:-liste-des-d%C3%A9pendances">https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Plugin-:-liste-des-d%C3%A9pendances</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_les_api">Les API</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="__l_api">&#8201;&#8212;&#8201;L&#8217;API</h3>
+<h3 id="__application_android">&#8201;&#8212;&#8201;Application Android</h3>
 <div class="paragraph">
 <p>Une API est mise à disposition pour comprendre et troubleshooter, les échanges entre le plugin et l&#8217;application.<br>
-Elle est disponible sur l&#8217;espace Github : <a href="https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Service-Android-:-Description-des-m%C3%A9thodes">l&#8217;API</a>.</p>
+Elle est disponible sur l&#8217;espace Github : <a href="https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Android-:-Description-des-m%C3%A9thodes">l&#8217;API</a>.<br>
+(Cette API nécessite une clé échangée entre le plugin et l&#8217;Apk).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__int_gration_des_fonctionnalit_es_tws_dans_des_plugins_tiers">&#8201;&#8212;&#8201;Intégration des fonctionnalitées TWS dans des plugins tiers</h3>
+<div class="paragraph">
+<p>Une API est mise à disposition pour permettre aux développeurs de plugin tiers d&#8217;utiliser les fonctionnalité de ce plugin TWS, pour récupérer (par exemple) des fichiers audio issus du plugin TWS.<br>
+Elle est disponible sur l&#8217;espace Github : <a href="https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Plugin-:-fonctions-pour-plugins-tiers">l&#8217;API</a>.</p>
 </div>
 </div>
 </div>
@@ -967,23 +1071,14 @@ Elle est disponible sur l&#8217;espace Github : <a href="https://github.com/abar
 <li>
 <p>paramétrage de la voix "à la volé", via une commande (utilisable dans les scénarios) ;<br></p>
 </li>
-<li>
-<p>recherche de fichier "orphelin" au niveau de l&#8217;espace de stockage<br></p>
-</li>
 </ul>
-</div>
-<div class="sect2">
-<h3 id="_version_documentaire">Version documentaire</h3>
-<div class="paragraph">
-<p><em>Mise à jour le : 21 mai 2017</em><br></p>
-</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-05-22 22:50:56 CEST
+Last updated 2017-08-12 15:45:35 CEST
 </div>
 </div>
 </body>

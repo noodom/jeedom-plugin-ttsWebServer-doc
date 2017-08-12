@@ -21,13 +21,17 @@ Le plugin dispose des fonctionnalités suivantes :
 	
 TIP: `(*1)`: **les plugins associés doivent obligatoirement être installés** pour que la diffusion sur ces players fonctionnent correctement (pour certain, les commandes "dire" des plugin initiaux sont réutilisés). +
 Remarque: si le plugin n'est pas installé, la diffusion de la synthèse par celui-ci ne sera pas proposé au niveau du TTS Web Server. +
-`(*2)`: par défaut, le moteur Google, mais aussi si vous achetez des voix supplémentaires Voxygen par exemple. +
+`(*2)`: par défaut, le moteur Google, mais aussi si vous achetez des voix supplémentaires (Voxygen par exemple). +
 
 Les commandes du Serveur TTS peuvent être utilisées via le Widget (standard jeedom) sur les dashbord/design, mais également au niveau des scénarios. +
 
 NOTE: * _dans la suite du document, "TTS Web Server" est abrégé en "TWS"._ +
 * _sur les différentes interfaces (configuration, équipement, ...) pour chaque paramètre, une icone avec un "?" permet d'obtenir des informations sur le paramètre et permet déjà d'apporter un niveau de compréhension._
 
+=== -- Représentation des 2 widgets possibles
+
+image:../images/ttsWebServer_screenshot7.jpg[]
+ +
 
 == Configuration
 
@@ -62,7 +66,7 @@ Pour plus d'information se référer à la https://source.android.com/source/bui
 Après téléchargement du plugin, vous devez l'activer pour profiter de ces fonctionnalités. +
 
 Une mise à niveau / installation des "Dépendances" est fortement recommandée pour disposer de toutes les fonctionnalités du plugin. 
-_(plus d'informations sur https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Service-Plugin-:-liste-des-d%C3%A9pendances[les dépendances])_ +
+_(plus d'informations sur https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Plugin-:-liste-des-d%C3%A9pendances[les dépendances])_ +
 
 Des paramètres de configuration vous sont proposés, mais les valeurs par défaut peuvent être conservées. +
 
@@ -80,6 +84,11 @@ Un bouton vous permet de réaliser l'opération manuellement.
 | (Maintenance) Vérifier l'existance des fichiers | Si l'option est activée, une maintenant quotidienne (à 0h), est réalisée pour vérifier si les fichiers listés dans la bibliothèque sont bien présents, en fonction du "lieu" de sauvegarde définie. +
 En cas d'erreur, une icone s'affiche dans la colonne "emplacement" sur la bibliothèque. +
 Un bouton vous permet de réaliser l'opération manuellement.
+| (Maintenance) Rechercher les fichiers "orphelins" | Permet de recherche les fichiers orphelins (présent sur l'espace de stockage, mais absent de la bibliothèque). 2 valeurs possibles: +
+- "création en bibliothèque": le fichier est recréé dans la bibliothèque, mais sans phrase associée; cela vous permet d'avoir une vision de ce que vous avez dans le répertoire de stockage et les supprimers au besoin. +
+- "suppression": le fichier est directement supprimé.
+| (Maintenance) Suppression fichiers anciens | Permet de supprimer les fichiers dont la date d'utilisation est plus anciennes que la durée sélectionnées. +
+Valeurs possibles: Désactivé, 15j, 30j, 90j, 180j.
 | (Distant) TimeOut des requêtes | Définie la durée de timeout de la requête émise entre le plugin et l'application Android TTS Web Server. + 
 Valeurs possibles: 10, 15, 30 et 60 secondes.
 | (Distant) Fréquence de récupération des logs | Définie la fréquence à laquelle, le plugin TWS ira récupérer les logs disponible sur l'application Android TWS, pour les enregistrer localement sur jeedom. + 
@@ -170,12 +179,11 @@ TIP: `(*1)`: l'emplacement par défaut se trouve au même niveau que le réperto
 
 image:../images/ttsWebServer_TWS3.jpg[]
 
-Depuis cette page, vous pouvez renommer le nom des commandes qui ont été détectée comme des players potentiels pour la diffusion de TTS. +
-Ce nom apparait au niveau du widget (bouton de validation d'envoi du texte à synthétiser). +
+Depuis cette page, vous pouvez renommer le nom des commandes qui ont été détectées comme des players potentiels pour la diffusion de TTS. +
+Ce nom apparait au niveau du widget (bouton de validation d'envoi du texte à synthétiser) sur le widget de l'équipement "Serveur". +
+Vous pouvez également paramétrer son affichage ou non (si la case est décoché, la commande ne sera pas affichée sur l'équipement "Serveur").
 
-NOTE: L'enregistrement de ce nouveau nom doit obligatoirement être enregistré par le bouton "enregistré" au niveau de chaque ligne (colonne "Action"). +
-Remarque: il est également recommandé d'enregistrer au niveau de l'équipement également (pour permettre un raffrachissement des widgets). 
-
+NOTE: L'enregistrement de ce nouveau nom (ou changement de paramètres) doit obligatoirement être enregistré par le bouton "enregistré" au niveau de chaque ligne (colonne "Action"). +
 
 === -- Description des paramètres des équipements de synthèque
  
@@ -202,6 +210,28 @@ Si l'équipement a été créé par une "découverte", ces champs sont complét�
 2+|[blue]#*=== Divers ===*#
 | Type d'équipement & Application | Permet d'avoir une icone sur la page principale des équipements. +
 La liste "application" n'est pas encore utilisée, elle est là à titre d'information (pour l'instant). 
+|=======================
+
+*[lime underline]#L'onglet "Commandes"#* présente les commandes disponilbes au niveau de l'équipement local hébergent l'application TWS : 
+
+image:../images/ttsWebServer_TWS5.jpg[]
+
+Ces commandes sont créées à la création de l'équipement. Vous ne pouvez ni en ajouter, ni en supprimer (elles seront créées lors d'un enregistrement). + 
+Vous pouvez : modifier le nom, paramétrer si vous les afficher ou non et si vous souhaitez historiser les données ou non.
+ 
+[cols="3,9", frame="topbot", options="header"]
+|=======================
+| Paramètre	| Description
+| Statut WS | Remonte l'état du service de l'application TWS distante. + 
+Remarque: cette information est mise à jour à chaque requête vers l'application. +
+Cas à prendre en compte: dans le cas d'un timeout de la requête TTS, l'état passera à "0". 
+| Batterie | Remonte le niveau de batterie de l'équipement distant où est hébergé l'application TWS (en %). +
+Remarque: le niveau de batterie reste à la dernière valeur connue lorsque l'application distante TWS n'est pas joignable.
+| Dire | Cette commande permet d'envoyer une demande de diffusion TTS sur l'équipement distant. 
+(La même commande se retrouve aussi sur l'équipement "Serveur" pour l'équipement distant en question.) + 
+Remarque: dans ce cas, la fonction "cluster" ne s'applique pas. 
+| Relancer Service | Cette commande permet de relancer le Service sur l'application TWS distante. +
+_(Attention: cette action NE DEMARRE PAS l'application, elle relance uniquement le service d'écoute.)_
 |=======================
 
 *[lime underline]#L'onglet "Etats / Infos"#* présente de remonter des informations liée à l'application TWS : 
@@ -246,6 +276,7 @@ Des icones peuvent apparaitre, permettant d'identifier des points d'attention vi
 - *[fuchsia-background]#"?"#* (à coté du l'emplacement) : impossible d'indiquer si ce fichier existe, car son emplacement est différent de celui configuré actuellement ; 
 - *[red-background]#"x"#* (à coté de l'emplacement) : le fichier n'a pas été trouvé à l'emplacement indiqué. 
 
+Le bouton "Tout Supprimer" permet de supprimer toutes les données présentes dans la bibliothèque, ainsi que les fichiers orphelins détectés sur l'espace de stockage en cours de configuration. +
 
 == Fonctionnalités complémentaires disponibles
 
@@ -260,20 +291,26 @@ A savoir :
 * si les décimales égalent "0", le zéro n'est pas diffusé (exemple: @U|12.0|degrés@, il sera diffusé : "12 degré"). +
 * la valeur de l'unité n'est pas obligatoire (exemple: @U|valeur@), ... mais sans intérêt.
 
+== Les Dépendances 
 
-== L'application Android
+Les dépenses du plugin sont listées à l'adresse suivante : +
+https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Plugin-:-liste-des-d%C3%A9pendances
 
-=== -- L'API
+
+== Les API
+
+=== -- Application Android
 
 Une API est mise à disposition pour comprendre et troubleshooter, les échanges entre le plugin et l'application. +
-Elle est disponible sur l'espace Github : https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Service-Android-:-Description-des-m%C3%A9thodes[l'API].
+Elle est disponible sur l'espace Github : https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Android-:-Description-des-m%C3%A9thodes[l'API]. +
+(Cette API nécessite une clé échangée entre le plugin et l'Apk).
 
+=== -- Intégration des fonctionnalitées TWS dans des plugins tiers
+
+Une API est mise à disposition pour permettre aux développeurs de plugin tiers d'utiliser les fonctionnalité de ce plugin TWS, pour récupérer (par exemple) des fichiers audio issus du plugin TWS. +
+Elle est disponible sur l'espace Github : https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Plugin-:-fonctions-pour-plugins-tiers[l'API].
 
 
 == Roadmap
 - diffusion en local sur la box jeedom ; +
 - paramétrage de la voix "à la volé", via une commande (utilisable dans les scénarios) ; +
-- recherche de fichier "orphelin" au niveau de l'espace de stockage +
-
-=== Version documentaire 
-_Mise à jour le : 21 mai 2017_ +
