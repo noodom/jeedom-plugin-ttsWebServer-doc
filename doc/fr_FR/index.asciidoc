@@ -3,7 +3,7 @@
 
 == Description
 Ce plugin vous permet de générer des messages TTS via un Web Service dédié hébergé sur Android (donc aucune utilisation du cloud). + 
-Pour permettre cette fonction, ce plugin nécessite obligatoire l'installation de l'application Android du même nom (TTS Web Server). +
+Pour permettre cette fonction, ce plugin nécessite obligatoirement l'installation de l'application Android du même nom (TTS Web Server). +
  + 
 Le plugin dispose des fonctionnalités suivantes : 
 
@@ -19,11 +19,11 @@ Le plugin dispose des fonctionnalités suivantes :
 	
 	* d'une bibliothèque des messages complètement administrable, ainsi que la possibilité d'utiliser tous les moteurs `(*2)` installés sur votre équipement Android. +
 	
-TIP: `(*1)`: **les plugins associés doivent obligatoirement être installés** pour que la diffusion sur ces players fonctionnent correctement (pour certain, les commandes "dire" des plugin initiaux sont réutilisés). +
-Remarque: si le plugin n'est pas installé, la diffusion de la synthèse par celui-ci ne sera pas proposé au niveau du TTS Web Server. +
+TIP: `(*1)`: **les plugins associés doivent obligatoirement être installés** pour que la diffusion sur ces players fonctionnent correctement (pour certains, les commandes "dire" des plugin initiaux sont réutilisés). +
+Remarque: si le plugin n'est pas installé, la diffusion de la synthèse par celui-ci ne sera pas proposée au niveau du TTS Web Server. +
 `(*2)`: par défaut, le moteur Google, mais aussi si vous achetez des voix supplémentaires (Voxygen par exemple). +
 
-Les commandes du Serveur TTS peuvent être utilisées via le Widget (standard jeedom) sur les dashbord/design, mais également au niveau des scénarios. +
+Les commandes du Serveur TTS peuvent être utilisées via le Widget (standard jeedom) sur les dashboard/design, mais également au niveau des scénarios. +
 
 NOTE: * _dans la suite du document, "TTS Web Server" est abrégé en "TWS"._ +
 * _sur les différentes interfaces (configuration, équipement, ...) pour chaque paramètre, une icone avec un "?" permet d'obtenir des informations sur le paramètre et permet déjà d'apporter un niveau de compréhension._
@@ -45,7 +45,7 @@ Ces "pré-requis" peuvent constituer une description pas à pas des tâches à s
 ** Cocher l'option "Afficher le panel mobile" ; 
 * Sur votre terminal Android : 
 ** Activer le paramètre "source inconnue" (généralement accessible dans les paramètres de sécurité) ; 
-** Autoriser le stockage de fichier pour l'application TWS (action à faire, une fois l'installation terminée, étape ci-dessous) ; 
+** Autoriser le stockage de fichiers pour l'application TWS (action à faire, une fois l'installation terminée, étapes ci-dessous) ; 
 * Depuis l'interface mobile de Jeedom `(*1)`, se rendre sur le menu plugin ; 
 ** cliquer sur l'icone TWS et installer l'application ; 
 ** lancer l'application ; 
@@ -78,23 +78,23 @@ image:../images/ttsWebServer_screenshot2.jpg[]
 | Autoriser la diffusion sur | Liste les types de player où le TTS peut être diffusé, dépend des plugins installés. +
 Si vous ne souhaitez pas que le plugin TWS propose une commande pour un type de player (ex: Sonos), vous pouvez le décocher. +
 Remarque: après l'installation de TWS, si vous installez un nouveau plugin de player, il ne sera pas coché par défaut (car non connu de TWS)
-| (Maintenance) Autoriser la suppression des fichiers temporaires "résiduels" | Si l'option est activée, une maintenant quotidienne (à 0h), est réalisée pour supprimer des différents répertoires du plugin les fichier générés temporairement. +
+| (Maintenance) Autoriser la suppression des fichiers temporaires "résiduels" | Si l'option est activée, une maintenance quotidienne (à 0h), est réalisée pour supprimer des différents répertoires du plugin les fichiers générés temporairement. +
 _Remarque: une suppression est déjà opérée au fil de l'eau théoriquement._ +
 Un bouton vous permet de réaliser l'opération manuellement.
-| (Maintenance) Vérifier l'existance des fichiers | Si l'option est activée, une maintenant quotidienne (à 0h), est réalisée pour vérifier si les fichiers listés dans la bibliothèque sont bien présents, en fonction du "lieu" de sauvegarde définie. +
+| (Maintenance) Vérifier l'existence des fichiers | Si l'option est activée, une maintenance quotidienne (à 0h), est réalisée pour vérifier si les fichiers listés dans la bibliothèque sont bien présents, en fonction du "lieu" de sauvegarde défini. +
 En cas d'erreur, une icone s'affiche dans la colonne "emplacement" sur la bibliothèque. +
 Un bouton vous permet de réaliser l'opération manuellement.
-| (Maintenance) Rechercher les fichiers "orphelins" | Permet de recherche les fichiers orphelins (présent sur l'espace de stockage, mais absent de la bibliothèque). 2 valeurs possibles: +
-- "création en bibliothèque": le fichier est recréé dans la bibliothèque, mais sans phrase associée; cela vous permet d'avoir une vision de ce que vous avez dans le répertoire de stockage et les supprimers au besoin. +
+| (Maintenance) Rechercher les fichiers "orphelins" | Permet de rechercher les fichiers orphelins (présents sur l'espace de stockage, mais absents de la bibliothèque). 2 valeurs possibles: +
+- "création en bibliothèque": le fichier est recréé dans la bibliothèque, mais sans phrase associée; cela vous permet d'avoir une vision de ce que vous avez dans le répertoire de stockage et les supprimer au besoin. +
 - "suppression": le fichier est directement supprimé.
-| (Maintenance) Suppression fichiers anciens | Permet de supprimer les fichiers dont la date d'utilisation est plus anciennes que la durée sélectionnées. +
+| (Maintenance) Suppression fichiers anciens | Permet de supprimer les fichiers dont la date d'utilisation est plus ancienne que la durée sélectionnée. +
 Valeurs possibles: Désactivé, 15j, 30j, 90j, 180j.
-| (Distant) TimeOut des requêtes | Définie la durée de timeout de la requête émise entre le plugin et l'application Android TTS Web Server. + 
+| (Distant) TimeOut des requêtes | Définit la durée de timeout de la requête émise entre le plugin et l'application Android TTS Web Server. + 
 Valeurs possibles: 10, 15, 30 et 60 secondes.
-| (Distant) Fréquence de récupération des logs | Définie la fréquence à laquelle, le plugin TWS ira récupérer les logs disponible sur l'application Android TWS, pour les enregistrer localement sur jeedom. + 
+| (Distant) Fréquence de récupération des logs | Définit la fréquence à laquelle, le plugin TWS ira récupérer les logs disponibles sur l'application Android TWS, pour les enregistrer localement sur jeedom. + 
 Valeurs possibles: Désactivé, 5, 15, 30 mins, 1h, 3h.
 | Modes autorisés pour l'ajout d'équipement distant "TTS Web Server" | Propose 2 choix : le bouton "Ajouter" (avec saisie manuelle), et le bouton "Découverte". +
-_Remarque: il est recommander d'utiliser de préférence le bouton "Découverte" `(*3)`, le bouton "Ajouter" n'est pas proposé par défaut (il a été rajouté suite à la rencontre des difficultés pour certains utilisateurs)._
+_Remarque: il est recommandé d'utiliser de préférence le bouton "Découverte" `(*3)`, le bouton "Ajouter" n'est pas proposé par défaut (il a été rajouté suite à la rencontre des difficultés pour certains utilisateurs)._
 | (UPDATE) Mettre à  jour les noms des fichiers avec la voix, dans la bibliothèque (en bdd et au niveau du fichier). | Cette action va permettre de valoriser la colonne "Voix" dans la bibliothèque. + 
 Ce cas existe si vous n'avez pas encore synchronisé vos voix depuis le plugin, mais que vous avez généré des messages de synthèse. +
 Remarque: cette action n'est possible que si vous disposez au moins de la version 1.1 de l'application Android (apk).
@@ -111,16 +111,16 @@ Cette page se découpe en 3 zones :
 ** "Réglages TTS" : accès aux paramètres du serveur (lieu sauvegarde, encodage, nom des commandes, ...)
 
 * les **applications distantes** "TTS Web Server" (Android) : 
-** bouton "Découverte" : permet de lancer la découverte de nouveau équipement sur le réseau `(*1)`;
+** bouton "Découverte" : permet de lancer la découverte de nouveaux équipements sur le réseau `(*1)`;
 ** les Web Server distants découverts `(*2)`; 
 
 * les **players TTS** : 
-** bouton "Synchronise Player" : permet de lancer la synchronisation des players pour voir s'il y en a de nouveaux disponibles et configurés dans Jeedom. Tous les "types" de player configuré, disposera de sa propre commande. 
+** bouton "Synchronise Player" : permet de lancer la synchronisation des players pour voir s'il y en a de nouveaux disponibles et configurés dans Jeedom. Tous les "types" de players configurés disposeront de leur propre commande. 
 ** les players détectés en fonction du plugin associé (remarque: ces icones ne sont pas cliquables, c'est juste informatif)
 
 TIP: `(*1)`: Pour disposer de ce bouton, les fonctions linux "ARP-SCAN" et "NC" doivent être installées. +
 Par ailleurs, l'application Android doit être lancée, le device en service (non en veille) et l'application en écoute, sinon la découverte ne pourra pas se faire. +
-`(*2)`: une icone (play en vert), permet de savoir si l'équipement est actif. En passant la sourie, une date indiquant la dernière "validation" est affichée.
+`(*2)`: une icone (play en vert), permet de savoir si l'équipement est actif. En passant la souris, une date indiquant la dernière "validation" est affichée.
 
 === -- Description des paramètres du Serveur TWS
 
@@ -146,9 +146,9 @@ image:../images/ttsWebServer_screenshot5.jpg[]
 |=======================
 | Paramètre	| Description
 2+|[blue]#*=== Paramètres d'utilisation ===*#
-| Format de fichier/encodage | Définie le format pour conserver les fichiers. Valeurs possibles: Wav ou MP3. +
+| Format de fichier/encodage | Définit le format pour conserver les fichiers. Valeurs possibles: Wav ou MP3. +
 *Remarque:* En archivage "local", le format MP3 est obligatoire pour permettre une diffusion en mode "radio" sur les différents player.
-| Autoriser l'archivage | Définie l'emplacement où seront stoqués les fichiers enregistrés. +
+| Autoriser l'archivage | Définit l'emplacement où seront stockés les fichiers enregistrés. +
 Valeurs possibles : +
 - "aucun" : le fichier est supprimé après son utilisation ; +
 - "Distant (nas)": archivage sur un espace distant (autre paramètre à configurer) ; +
@@ -160,11 +160,11 @@ Le champ dossier doit contenir le nom du dossier de partage et le nom du répeto
 | _(si Distant)_ +
 Utilisateur et mot de passe	| Renseignez les utilisateurs et mot de passe pour accéder à l'espace de partage. +
 | Gestion de la diffusion en fonction de la voix | Cette option permet de définir le comportement souhaité par rapport à un même texte à diffusion en fonction de la voix, 2 cas possibles: +
--- "Diffusion fichier existant, même si voix différente": au moment de la diffusion du message, si le message existe en bibliothèque avec une voix différente, le message est quand diffusé. +
--- "Générer un fichier systématiquement, si voix différente": au moment de la diffusion du message, si le message existe en bibliothèque pour une voix différente, un nouveau message est quand même généré avec le nouvelle voix ; vous aurez donc 2 foix le même contenu de message en bibliothèque pour 2 voix différentes.
+-- "Diffusion fichier existant, même si voix différente": au moment de la diffusion du message, si le message existe en bibliothèque avec une voix différente, le message est quand même diffusé. +
+-- "Générer un fichier systématiquement, si voix différente": au moment de la diffusion du message, si le message existe en bibliothèque pour une voix différente, un nouveau message est quand même généré avec la nouvelle voix ; vous aurez donc 2 fois le même contenu de message en bibliothèque pour 2 voix différentes.
 2+|[blue]#*=== Liste des applications distantes "TTS Web Server" ===*#
-2+| Cette zone vous permet de définir l'ordre de solicitation des applications distantes TWS. Cette fonctionnalité est solicitée si vous diffuser un message sur un équipement autre qu'une tablette/téléphone (exemple: Sonos, ....) +
-Vous pouvez donc utiliser vos applications distantes en mode "cluster", le 1er est solicité en priorité, s'il n'est pas disponible le suivante est testé, et ainsi de suite... +
+2+| Cette zone vous permet de définir l'ordre de sollicitation des applications distantes TWS. Cette fonctionnalité est sollicitée si vous diffusez un message sur un équipement autre qu'une tablette/téléphone (exemple: Sonos, ....) +
+Vous pouvez donc utiliser vos applications distantes en mode "cluster", le 1er est sollicité en priorité, s'il n'est pas disponible le suivant est testé, et ainsi de suite... +
  +
 *Remarque:* La voix configurée au niveau de l'application TWS sera alors utilisée pour la synthèse. Si vous avez configuré des voix différentes, la diffusion dépendra donc d'application TWS disponible. +
  +
@@ -181,7 +181,7 @@ image:../images/ttsWebServer_TWS3.jpg[]
 
 Depuis cette page, vous pouvez renommer le nom des commandes qui ont été détectées comme des players potentiels pour la diffusion de TTS. +
 Ce nom apparait au niveau du widget (bouton de validation d'envoi du texte à synthétiser) sur le widget de l'équipement "Serveur". +
-Vous pouvez également paramétrer son affichage ou non (si la case est décoché, la commande ne sera pas affichée sur l'équipement "Serveur").
+Vous pouvez également paramétrer son affichage ou non (si la case est décochée, la commande ne sera pas affichée sur l'équipement "Serveur").
 
 NOTE: L'enregistrement de ce nouveau nom (ou changement de paramètres) doit obligatoirement être enregistré par le bouton "enregistré" au niveau de chaque ligne (colonne "Action"). +
 
@@ -191,7 +191,7 @@ Un bouton "dupliquer", permet de dupliquer l'équipement et les commandes associ
 
 *[lime underline]#L'onglet "Equipement"#* présente les informations standard de Jeedom (idem équipement "Réglage TTS"). +
 
-*[lime underline]#L'onglet "Paramètres"#* présente les paramètres disponibles au niveau de l'équipement hébergent l'application TWS : 
+*[lime underline]#L'onglet "Paramètres"#* présente les paramètres disponibles au niveau de l'équipement hébergeant l'application TWS : 
 
 image:../images/ttsWebServer_screenshot3.jpg[]
 
@@ -199,11 +199,11 @@ image:../images/ttsWebServer_screenshot3.jpg[]
 |=======================
 | Paramètre	| Description
 2+|[blue]#*=== Paramètres d'utilisation ===*#
-| Voix `(*1)` | liste les voix disponibles sur cette équipement. _(Remarque: disponible depuis la version Android 1.1)_ + 
+| Voix `(*1)` | liste les voix disponibles sur cet équipement. _(Remarque: disponible depuis la version Android 1.1)_ + 
 Un bouton "Synchronisation" permet de récupérer les voix disponibles sur l'équipement distant. +
 Un bouton "Ecouter" permet d'écouter un exemple de la voix directement sur l'équipement.  + 
 | Pas de cache en lecture locale | Par défaut, en lecture locale sur un équipement distant, le fichier audio généré par la synthèse est renvoyé; permettant de compléter la bibliothèque des messages. +
-En cochant cette option, aucun fichier ne sera renvoyé, et la bibliothèque ne sera pas renseigné. 
+En cochant cette option, aucun fichier ne sera renvoyé, et la bibliothèque ne sera pas renseignée. 
 2+|[blue]#*=== Paramètres de l'application "TTS Web Server" ===*#
 | Adresse IP (wifi) | Les champs @IP et @Mac sont à renseigner uniquement si l'ajout de l'équipement est fait manuellement. + 
 Si l'équipement a été créé par une "découverte", ces champs sont complétés et non modifiables (grisés). +
@@ -212,12 +212,12 @@ Si l'équipement a été créé par une "découverte", ces champs sont complét�
 La liste "application" n'est pas encore utilisée, elle est là à titre d'information (pour l'instant). 
 |=======================
 
-*[lime underline]#L'onglet "Commandes"#* présente les commandes disponilbes au niveau de l'équipement local hébergent l'application TWS : 
+*[lime underline]#L'onglet "Commandes"#* présente les commandes disponibles au niveau de l'équipement local hébergeant l'application TWS : 
 
 image:../images/ttsWebServer_TWS5.jpg[]
 
 Ces commandes sont créées à la création de l'équipement. Vous ne pouvez ni en ajouter, ni en supprimer (elles seront créées lors d'un enregistrement). + 
-Vous pouvez : modifier le nom, paramétrer si vous les afficher ou non et si vous souhaitez historiser les données ou non.
+Vous pouvez : modifier le nom, paramétrer si vous les affichez ou non et si vous souhaitez historiser les données ou non.
  
 [cols="3,9", frame="topbot", options="header"]
 |=======================
@@ -241,8 +241,8 @@ image:../images/ttsWebServer_screenshot4.jpg[]
 La définition de chaque champ de cette page est décrite directement sur la page, via l'icone "?" à coté du titre. +
 
 
-NOTE: `(*1)`: le changement de voix entre moteur "Voxygen" est assez rapide. Toutefois le retour sur le moteur "Google" peut générer un temps de latence assez important. +
-Il est donc déconseillé de faire "yoyo" entre les voix (du moins avec la voix Google), même pour tester !
+NOTE: `(*1)`: le changement de voix entre moteur "Voxygen" est assez rapide. Toutefois, le retour sur le moteur "Google" peut générer un temps de latence assez important. +
+Il est donc déconseillé de faire le "yoyo" entre les voix (du moins avec la voix Google), même pour tester !
 
 === -- Assistance pour l'installation de l'application Android (APK)
 
@@ -251,7 +251,7 @@ L'installation peut se faire via le plugin en activant la page "mobile" dans la 
 
 Depuis votre mobile, allez sur le menu "Plugin", puis "TTS Web Server". +
 Une page rappelant les pré-requis pour l'installation est affichée. +
-Après avoir respecté ces pré-requis, cliquez sur l'icone TWS et l'apk est téléchargé sur votre android (téléphone/tablette), puis son installation est proposée. 
+Après avoir respecté ces pré-requis, cliquez sur l'icone TWS et l'apk est téléchargé sur votre Android (téléphone/tablette), puis son installation est proposée. 
 
 [cols="5,7", frame="topbot"]
 |=======================
@@ -267,14 +267,14 @@ Pour pouvoir la visualiser, vous devez activer le "panel desktop" depuis la page
 image:../images/ttsWebServer_screenshot6.jpg[]
 
 Ce tableau présente la liste des messages enregistrés et renseignés dans la bibliothèque du plugin. +
-Par défaut, l'ordre d'affichage correspond au dernier message synthétisé ou utilisé, mais l'ordre peut être modifié pour réaliser vos cherches. 
+Par défaut, l'ordre d'affichage correspond au dernier message synthétisé ou utilisé, mais l'ordre peut être modifié pour réaliser vos recherches. 
 L'utilisateur peut également filtrer les valeurs recherchées. +
 
 Des icones peuvent apparaitre, permettant d'identifier des points d'attention vis-à-vis du fichier : 
 
-- *[red-background]#"!"#* (à coté de la taille) : indique que le fichier présente une taille faible (inférieur à 90ko). Si vous utilisez ce fichier en lecture local ou via Squeezebox/SynoAudio, le fichier peut ne pas être lut correctement car pas assez volumineux pour "activer" une lecture. +
-- *[fuchsia-background]#"?"#* (à coté du l'emplacement) : impossible d'indiquer si ce fichier existe, car son emplacement est différent de celui configuré actuellement ; 
-- *[red-background]#"x"#* (à coté de l'emplacement) : le fichier n'a pas été trouvé à l'emplacement indiqué. 
+- *[red-background]#"!"#* (à coté de la taille) : indique que le fichier présente une taille faible (inférieure à 90ko). Si vous utilisez ce fichier en lecture locale ou via Squeezebox/SynoAudio, le fichier peut ne pas être lu correctement car pas assez volumineux pour "activer" une lecture. +
+- *[fuchsia-background]#"?"#* (à coté de l'emplacement) : impossible d'indiquer si ce fichier existe, car son emplacement est différent de celui configuré actuellement ; 
+- *[red-background]#"x"#* (à côté de l'emplacement) : le fichier n'a pas été trouvé à l'emplacement indiqué. 
 
 Le bouton "Tout Supprimer" permet de supprimer toutes les données présentes dans la bibliothèque, ainsi que les fichiers orphelins détectés sur l'espace de stockage en cours de configuration. +
 
@@ -301,16 +301,16 @@ https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Pl
 
 === -- Application Android
 
-Une API est mise à disposition pour comprendre et troubleshooter, les échanges entre le plugin et l'application. +
+Une API est mise à disposition pour comprendre et troubleshooter les échanges entre le plugin et l'application. +
 Elle est disponible sur l'espace Github : https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Android-:-Description-des-m%C3%A9thodes[l'API]. +
 (Cette API nécessite une clé échangée entre le plugin et l'Apk).
 
-=== -- Intégration des fonctionnalitées TWS dans des plugins tiers
+=== -- Intégration des fonctionnalités TWS dans des plugins tiers
 
-Une API est mise à disposition pour permettre aux développeurs de plugin tiers d'utiliser les fonctionnalité de ce plugin TWS, pour récupérer (par exemple) des fichiers audio issus du plugin TWS. +
+Une API est mise à disposition pour permettre aux développeurs de plugins tiers d'utiliser les fonctionnalités de ce plugin TWS, pour récupérer (par exemple) des fichiers audios issus du plugin TWS. +
 Elle est disponible sur l'espace Github : https://github.com/abarrau/jeedom-plugin-ttsWebServer-doc/wiki/TTS-Web-Server-Plugin-:-fonctions-pour-plugins-tiers[l'API].
 
 
 == Roadmap
 - diffusion en local sur la box jeedom ; +
-- paramétrage de la voix "à la volé", via une commande (utilisable dans les scénarios) ; +
+- paramétrage de la voix "à la volée", via une commande (utilisable dans les scénarios) ; +
